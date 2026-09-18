@@ -160,4 +160,6 @@ update = function() {
   setTimeout(initSyncScroll, 50); // 이미지가 로드될 시간을 살짝 줍니다.
 };
 
+
+
 render();
