@@ -19,7 +19,7 @@ const works = [
     lettered:"img/portfolio/JP1_24.jpg"
   },
   {
-    name:"Background Lettering · 02",
+    name:"독자인데 불만있습니다",
     original:"assets/background-original-02.jpg",
     lettered:"assets/background-lettered-02.jpg"
   },
