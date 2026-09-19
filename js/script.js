@@ -19,24 +19,29 @@ const works = [
     lettered:"img/portfolio/JP1_24.jpg"
   },
   {
-    name:"독자인데 불만있습니다",
-    original:"assets/background-original-02.jpg",
-    lettered:"assets/background-lettered-02.jpg"
+    name:"사적취향",
+    original:"img/portfolio/JP2_61O.jpg",
+    lettered:"img/portfolio/JP2_61.jpg"
   },
   {
     name:"리트라이",
-    original:"assets/background-original-03.jpg",
-    lettered:"assets/background-lettered-03.jpg"
+    original:"img/portfolio/JP3_46O.jpg",
+    lettered:"img/portfolio/JP3_46.jpg"
   },
   {
-    name:"Background Lettering · 04",
-    original:"assets/background-original-04.jpg",
-    lettered:"assets/background-lettered-04.jpg"
+    name:"망할 운명의 걸그룹 리더가 되었습니다",
+    original:"img/portfolio/EN1_1O.jpg",
+    lettered:"img/portfolio/EN1_1.jpg"
   },
   {
-    name:"Background Lettering · 05",
-    original:"assets/background-original-04.jpg",
-    lettered:"assets/background-lettered-04.jpg"
+    name:"엔딩메이커",
+    original:"img/portfolio/EN2_78O.jpg",
+    lettered:"img/portfolio/EN2_78.jpg"
+  },
+  {
+    name:"튜토리얼 탑의 고인물",
+    original:"img/portfolio/EN3_172O.jpg",
+    lettered:"img/portfolio/EN3_172.jpg"
   }
 ];
 
