@@ -24,7 +24,7 @@ const works = [
     lettered:"assets/background-lettered-02.jpg"
   },
   {
-    name:"Background Lettering · 03",
+    name:"리트라이",
     original:"assets/background-original-03.jpg",
     lettered:"assets/background-lettered-03.jpg"
   },
