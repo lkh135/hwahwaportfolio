@@ -15,8 +15,8 @@
 const works = [
   {
     name:"용사고교 던전공략과",
-    original:"img/portfolio/OG_JP1_41.jpg",
-    lettered:"img/portfolio/JP1_41.jpg"
+    original:"img/portfolio/JP1_24O.jpg",
+    lettered:"img/portfolio/JP1_24.jpg"
   },
   {
     name:"Background Lettering · 02",
