@@ -394,7 +394,15 @@ h2{
  /*font-size:12px;*/
  font-size:0.9rem;
 }
-.step span{font-size:10px;color:#858797}
+.step span{
+  /*font-size:10px;*/
+  font-size:0.7rem;
+  color:#858797;
+
+  display: block; /* 줄바꿈 및 간격 적용을 위해 필수 */
+  line-height: 1.3
+}
+
 .contact{
   background:linear-gradient(125deg,#17192d,#303351);
   color:#fff;border-radius:5px;padding:60px;
@@ -681,7 +689,7 @@ footer{padding:30px 0;color:#9092a2;font-size:10px;text-align:center}
   border:1px solid #dbe2f3;
   /*border-radius:18px;*/
   /*padding:34px;*/
-  padding:20px;
+  padding:15px;
   box-shadow:0 12px 35px rgba(45,62,110,.08);
 }
 .section-header{
