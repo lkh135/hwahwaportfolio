@@ -42,6 +42,11 @@ const works = [
     name:"튜토리얼 탑의 고인물",
     original:"img/portfolio/EN3_172O.jpg",
     lettered:"img/portfolio/EN3_172.jpg"
+  },
+  {
+    name:"칸나는 어떠한 결심을 했다 [19세 완전판]",
+    original:"img/portfolio/EN4_3O.jpg",
+    lettered:"img/portfolio/EN4_3.jpg"
   }
 ];
 
@@ -166,5 +171,117 @@ update = function() {
 };
 
 
+
+
+// 가로 드래그로 슬라이드 넘기기
+(function initDragSlider(){
+  const slider = document.querySelector(".slider");
+  if (!slider) return;
+
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let startTranslate = 0;
+  let lastX = 0;
+  let dragStarted = false;
+  let suppressClick = false;
+
+  function getWidth(){
+    return slider.clientWidth || 1;
+  }
+
+  function getTranslate(){
+    return -current * getWidth();
+  }
+
+  function setDragTranslate(x){
+    track.style.transform = `translateX(${x}px)`;
+  }
+
+  slider.addEventListener("dragstart", (e) => {
+    // 이미지의 브라우저 기본 드래그(이미지가 마우스를 따라오는 현상) 차단
+    e.preventDefault();
+  });
+
+  slider.addEventListener("pointerdown", (e) => {
+    // 버튼/닷을 누른 경우에는 드래그 시작하지 않음
+    if (e.target.closest(".arrow, .dot, button, a")) return;
+
+    e.preventDefault();
+    isDragging = true;
+    dragStarted = false;
+    startX = lastX = e.clientX;
+    startY = e.clientY;
+    startTranslate = getTranslate();
+
+    track.style.transition = "none";
+    slider.setPointerCapture?.(e.pointerId);
+  });
+
+  slider.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // 세로 스크롤 의도가 더 강하면 드래그 슬라이드를 취소
+    if (!dragStarted) {
+      if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 8) {
+        isDragging = false;
+        track.style.transition = "";
+        return;
+      }
+      if (Math.abs(dx) < 6) return;
+      dragStarted = true;
+      suppressClick = true;
+    }
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+      e.preventDefault();
+      lastX = e.clientX;
+      setDragTranslate(startTranslate + dx);
+    }
+  });
+
+  function endDrag(e){
+    if (!isDragging) return;
+    isDragging = false;
+
+    const dx = lastX - startX;
+    const threshold = Math.min(120, getWidth() * 0.18);
+
+    track.style.transition = "";
+
+    if (dragStarted && Math.abs(dx) >= threshold) {
+      go(current + (dx < 0 ? 1 : -1));
+    } else {
+      update();
+    }
+
+    if (e?.pointerId != null) {
+      try { slider.releasePointerCapture?.(e.pointerId); } catch (_) {}
+    }
+
+    setTimeout(() => { suppressClick = false; }, 0);
+  }
+
+  slider.addEventListener("pointerup", endDrag);
+  slider.addEventListener("pointercancel", endDrag);
+  slider.addEventListener("lostpointercapture", () => {
+    if (isDragging) endDrag();
+  });
+
+  slider.addEventListener("click", (e) => {
+    if (suppressClick) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
+
+  // 창 크기가 바뀌어도 현재 슬라이드 위치 유지
+  window.addEventListener("resize", () => {
+    if (!isDragging) update();
+  });
+})();
 
 render();
