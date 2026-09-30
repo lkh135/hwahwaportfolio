@@ -15,8 +15,8 @@
 const works = [
   {
     name:"용사고교 던전공략과",
-    original:"img/portfolio/JP4_2O.jpg",
-    lettered:"img/portfolio/JP4_2.jpg"
+    original:"img/portfolio/JP1_24O.jpg",
+    lettered:"img/portfolio/JP1_24.jpg"
   },
   // {
   //   name:"사적취향",
