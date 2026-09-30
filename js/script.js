@@ -15,39 +15,70 @@
 const works = [
   {
     name:"용사고교 던전공략과",
-    original:"img/portfolio/JP1_24O.jpg",
-    lettered:"img/portfolio/JP1_24.jpg"
+    original:"img/portfolio/JP4_2O.jpg",
+    lettered:"img/portfolio/JP4_2.jpg"
   },
+  // {
+  //   name:"사적취향",
+  //   original:"img/portfolio/JP2_61O.jpg",
+  //   lettered:"img/portfolio/JP2_61.jpg"
+  // },
+  // {
+  //   name:"리트라이",
+  //   original:"img/portfolio/JP3_46O.jpg",
+  //   lettered:"img/portfolio/JP3_46.jpg"
+  // },
+  // {
+  //   name:"망할 운명의 걸그룹 리더가 되었습니다",
+  //   original:"img/portfolio/EN1_1O.jpg",
+  //   lettered:"img/portfolio/EN1_1.jpg"
+  // },
+  // {
+  //   name:"엔딩메이커",
+  //   original:"img/portfolio/EN2_78O.jpg",
+  //   lettered:"img/portfolio/EN2_78.jpg"
+  // },
+  // {
+  //   name:"튜토리얼 탑의 고인물",
+  //   original:"img/portfolio/EN3_172O.jpg",
+  //   lettered:"img/portfolio/EN3_172.jpg"
+  // },
+
   {
-    name:"사적취향",
-    original:"img/portfolio/JP2_61O.jpg",
-    lettered:"img/portfolio/JP2_61.jpg"
-  },
-  {
-    name:"리트라이",
-    original:"img/portfolio/JP3_46O.jpg",
-    lettered:"img/portfolio/JP3_46.jpg"
-  },
-  {
-    name:"망할 운명의 걸그룹 리더가 되었습니다",
-    original:"img/portfolio/EN1_1O.jpg",
-    lettered:"img/portfolio/EN1_1.jpg"
-  },
-  {
-    name:"엔딩메이커",
-    original:"img/portfolio/EN2_78O.jpg",
-    lettered:"img/portfolio/EN2_78.jpg"
+    name:"회귀한 엑스트라가 천재가 됨",
+    original:"img/portfolio/EN6_34O.jpg",
+    lettered:"img/portfolio/EN6_34.jpg"
   },
   {
     name:"튜토리얼 탑의 고인물",
-    original:"img/portfolio/EN3_172O.jpg",
-    lettered:"img/portfolio/EN3_172.jpg"
+    original:"img/portfolio/EN7_168O.jpg",
+    lettered:"img/portfolio/EN7_168.jpg"
   },
   {
     name:"칸나는 어떠한 결심을 했다 [19세 완전판]",
     original:"img/portfolio/EN4_3O.jpg",
     lettered:"img/portfolio/EN4_3.jpg"
-  }
+  },
+  {
+    name:"죽지 않는 천재 창잡이",
+    original:"img/portfolio/EN5_1O.jpg",
+    lettered:"img/portfolio/EN5_1.jpg"
+  },
+  {
+    name:"엔딩메이커",
+    original:"img/portfolio/EN7_74O.jpg",
+    lettered:"img/portfolio/EN7_74.jpg"
+  },
+  {
+    name:"노모럴",
+    original:"img/portfolio/DE1_O.jpg",
+    lettered:"img/portfolio/DE1.jpg"
+  },
+  {
+    name:"탑에 갇혀 고인물",
+    original:"img/portfolio/EN8_82O.jpg",
+    lettered:"img/portfolio/EN8_82.jpg"
+  },
 ];
 
 const track=document.getElementById("track");
